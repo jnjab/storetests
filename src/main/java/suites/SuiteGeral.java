@@ -13,10 +13,7 @@ import tests.TestMonthlySummary;
 @RunWith(Suite.class)
 @SuiteClasses({
 		TestAccount.class,
-		TestFinancialMovement.class,
-		TestHome.class,
-		TestMonthlySummary.class,
-		TestAccountMovement.class
+		
 		
 })
 public class SuiteGeral {

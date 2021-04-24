@@ -26,7 +26,7 @@ public class BaseTest {
 	@Before
 	public  void starting() {
 		page.acessInitialScreen();
-		page.Login("asnazevedo@gmail.com", "asna5664");
+		page.Login("jn.jab.rj@gmail.com", "Test2021");
 	}
 	
 	@After
