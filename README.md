@@ -1,1 +1,1 @@
-# Your Logs Store Tests
+# Your Logo Store Tests
