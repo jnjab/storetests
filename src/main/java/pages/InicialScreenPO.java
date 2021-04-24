@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 
 import core.BasePage;
+import core.DriverFactory;
 
 public class InicialScreenPO extends BasePage {
 	
@@ -11,7 +12,7 @@ public class InicialScreenPO extends BasePage {
 	}
 	
 	public void clickSignIn() {
-		clickButton(By.xpath("//*/a[@class='login']");
+		clickButton(By.xpath("//*/a[@class='login']"));
 	}
 
 }

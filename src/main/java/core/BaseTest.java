@@ -14,18 +14,20 @@ import org.junit.rules.TestName;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
-import pages.LoginPage;
+import pages.InicialScreenPO;
+import pages.LoginPO;
 
 public class BaseTest {
 	//Authentication
-	private LoginPage page =  new LoginPage();
+	private LoginPO page =  new LoginPO();
+	private InicialScreenPO il = new InicialScreenPO();
 	
 	@Rule
 	public TestName testname = new TestName();
 	
 	@Before
 	public  void starting() {
-		page.acessInitialScreen();
+		il.acessInitialScreen();
 		page.Login("jn.jab.rj@gmail.com", "Test2021");
 	}
 	
