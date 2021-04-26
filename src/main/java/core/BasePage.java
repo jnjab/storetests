@@ -14,7 +14,9 @@ import java.util.List;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 public class BasePage {
@@ -273,6 +275,12 @@ public class BasePage {
 			itens.add(item.getText());
 		}
 		return itens;
+	}
+	/*********MOUSE ACTION **********/
+	public void mouseOver(By by) {
+		Actions action = new Actions(getDriver());
+		WebElement we = getDriver().findElement(by);
+			action.moveToElement(we).build().perform();
 	}
 	
 }

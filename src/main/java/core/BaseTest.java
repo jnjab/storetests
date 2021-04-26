@@ -5,31 +5,37 @@ import static core.DriverFactory.killDriver;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.rules.TestName;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
 import pages.InicialScreenPO;
-import pages.LoginPO;
 
 public class BaseTest {
 	//Authentication
-	private LoginPO page =  new LoginPO();
-	private InicialScreenPO il = new InicialScreenPO();
+	protected InicialScreenPO il = new InicialScreenPO();
 	
 	@Rule
 	public TestName testname = new TestName();
 	
+	@BeforeClass
+	public static void setup() {
+		
+		getDriver().manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+	}
+	
 	@Before
 	public  void starting() {
 		il.acessInitialScreen();
-		page.Login("jn.jab.rj@gmail.com", "Test2021");
-	}
+}
+		
 	
 	@After
 	public void terminate() throws IOException{
