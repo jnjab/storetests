@@ -24,7 +24,7 @@ public class PaymentPO extends BasePage {
 		
 	
 	public void saveOrderConfirmationDetailsToTextFile() throws IOException {
-		  String TestFile = "//target//files//orderDetails.txt";
+		  String TestFile = "//storetests//target//files//orderDetails.txt";
 		  File FC = new File(TestFile);//Created object of java File class.
 		  FC.createNewFile();//Create file.
 		  
